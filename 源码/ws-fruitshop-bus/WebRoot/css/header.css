@@ -1,0 +1,79 @@
+.navbar>.containerNew >.nav>li>a:hover{
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    background-color: inherit;
+}
+.navbar>.container >.nav>li:hover{
+
+}
+
+.navbar .nav>li.sep {
+    border-left: 1px solid rgba(255, 255, 255, 0.49);
+    width: 1px;
+    margin: 14px 20px;
+    height: 16px;
+}
+.about .background{
+    background: url(../images/bgk.png) center top no-repeat black;
+    background-size: cover;
+    opacity: 1;
+    height: 350px;
+}
+
+.about .background h1, .features .background h1 {
+    color: #fff;
+    padding: 180px 0 10px;
+    text-align: center;
+    margin: 0;
+    font-size: 48px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #fff;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(0,30,150,0.1);
+    border: 0;
+    height: 100%;
+    position: relative;
+}
+body {
+    font-family: 'proxima-nova',Proxima Nova,'Helvetica Neue',Helvetica,sans-serif;
+    font-size: 16px;
+    overflow: visible;
+    -webkit-font-smoothing: antialiased;
+}
+.navbar {
+    padding-left: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 30px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    top: 0;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*homepage*/
+
+body.homepage .introduce{
+    text-align: center;
+}
+body.homepage .introduce h2{
+    padding-top: 80px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #4c5869;
+    font-size: 3.4rem;
+    font-weight: 300;
+}
+body,html{
+    height: 100%;
+}

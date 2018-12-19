@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:cxf="http://cxf.apache.org/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+				            http://www.springframework.org/schema/beans/spring-beans.xsd
+				            http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+				            http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+				            http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
+
+	
+	<!-- http://127.0.0.1:8081/ws-fruitshop-user/ws -->
+	<jaxws:client id="userServiceClient" 
+	address="http://127.0.0.1:8081/ws-fruitshop-user/ws/user" 
+	serviceClass="com.fruitshop.user.service.UserServiceInterface"/>
+	
+	<!-- http://127.0.0.1:8084/ws-fruitshop-fruit/ws/fruit -->
+	<jaxws:client id="fruitServiceClient" 
+	address="http://127.0.0.1:8084/ws-fruitshop-fruit/ws/fruit" 
+	serviceClass="com.fruitshop.fruit.service.FruitServiceInterface"/>
+	
+	<!-- http://127.0.0.1:8087/ws-fruitshop-order/ws/order -->
+	<jaxws:client id="orderServiceClient" 
+	address="http://127.0.0.1:8087/ws-fruitshop-order/ws/order" 
+	serviceClass="com.fruitshop.order.service.OrderServiceInterface"/>
+</beans>
+

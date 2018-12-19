@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:cxf="http://cxf.apache.org/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+				            http://www.springframework.org/schema/beans/spring-beans.xsd
+				            http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+				            http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+				            http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
+
+	<!-- <jaxws:server>发布SOAP协议的服务，对JaxWsServerFactoryBean类的封装 -->
+	<!-- http://127.0.0.1:8084/ws-fruitshop-fruit/ws/fruit?wsdl -->
+	<!-- tomcat已经定义了地址和端口 -->
+	<jaxws:server address="/fruit"
+		serviceClass="com.fruit.service.FruitServiceInterface">
+		<jaxws:serviceBean>
+			<ref bean="fruitServiceInterface"></ref>
+		</jaxws:serviceBean>
+	</jaxws:server>
+
+	<jaxws:server address="/fruit2"
+		serviceClass="com.fruit.service.FruitServiceInterface2">
+		<jaxws:serviceBean>
+			<ref bean="fruitServiceInterface2"></ref>
+		</jaxws:serviceBean>
+	</jaxws:server>
+
+	<!-- 配置服务实现类 -->
+	<bean name="fruitServiceInterface" class="com.fruit.service.impl.FruitServiceInterfaceImpl"></bean>
+	
+	<bean name="fruitServiceInterface2" class="com.fruit.service.impl.FruitServiceInterfaceImpl2"></bean>
+
+</beans>
+
